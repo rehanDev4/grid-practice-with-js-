@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Practice Assignment 2</title>
+</head>
+<body>
+    <h1>Hello Grid container</h1>
+    <div class="container" id="Fruite">
+       
+
+        
+    <script>
+       
+        const groups = [
+      { group: "Fruits",       items: ["Apple", "Banana", "Orange","Apple", "Banana", "Orange","Apple", "Banana", "Orange","Apple", "Banana", "Orange","Orange","Orange",] },
+      { group: "Vegetables",   items: ["Carrot", "Broccoli", "Spinach"] },
+      { group: "Dairy",        items: ["Milk", "Cheese", "Yogurt"] },
+      { group: "Fruits",       items: ["Apple", "Banana", "Orange"] },
+    ];
+
+    let div = document.getElementById('Fruite');
+
+
+
+groups.forEach(groupObj =>{
+    let heading = document.createElement('h2');
+    heading.textContent = groupObj.group;
+    div.appendChild(heading);
+
+    let div1 = document.createElement('div');
+    div1.className = "card";
+    
+
+    groupObj.items.forEach( item=> {
+        let itemDiv = document.createElement("div");
+        itemDiv.className = "innercard";
+        itemDiv.textContent = item;
+        div1.appendChild(itemDiv);
+    }
+    );
+    div.appendChild(div1);
+});
+
+ // let div = document.getElementById('Fruite');
+        // // Add Heading into html 
+        // let h2 = document.createElement('h2');
+        // let text = document.createTextNode("Fruite Name");
+        // h2.appendChild(text);
+        // let body = document.body;
+        // // insert before already placed element 
+        // body.insertBefore(h2,body.children[0]);
+        // // div2 
+        // let div2 = document.createElement('div');
+        // div2.className = "card";
+        // let text2 = document.createTextNode("apple");
+        // div2.appendChild(text2);
+        // div.append(div2);
+
+
+
+// for(let i = 0; i<groups.length; i++){
+//     let div1 = document.createElement("div");
+//     div1.className = "card";
+//     for(let j = 0; j<groups[i].length; j++){
+//         let p = document.createElement("p");
+//         p.textContent = groups[i][j];
+        
+
+//         div1.appendChild(p);
+//     }
+//     div.appendChild(div1);
+
+// }
+
+
+
+// groups.forEach(item =>{
+//     let div1 = document.createElement('div');
+//     div1.className = "card";
+//     div1.innerHTML = `<h2>${item.group}</h2> <p>${item.items}</p>`;
+//     div.appendChild(div1);
+// });
+
+    </script>
+
+
+
+
+
+
+
+
+
+</body>
+</html>
+
+
+
+
